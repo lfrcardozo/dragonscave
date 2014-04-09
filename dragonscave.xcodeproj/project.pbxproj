@@ -17,14 +17,44 @@
 		A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */; };
 		A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */; };
 		A4E40F1918F5B94A002E63E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F1818F5B94A002E63E9 /* ViewController.m */; };
-		A4E40F1C18F5B94A002E63E9 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F1B18F5B94A002E63E9 /* MyScene.m */; };
-		A4E40F1E18F5B94A002E63E9 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1D18F5B94A002E63E9 /* Spaceship.png */; };
+		A4E40F1C18F5B94A002E63E9 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F1B18F5B94A002E63E9 /* Scene.m */; };
 		A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1F18F5B94A002E63E9 /* Images.xcassets */; };
 		A4E40F2718F5B94A002E63E9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F2618F5B94A002E63E9 /* XCTest.framework */; };
 		A4E40F2818F5B94A002E63E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFD18F5B94A002E63E9 /* Foundation.framework */; };
 		A4E40F2918F5B94A002E63E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F0118F5B94A002E63E9 /* UIKit.framework */; };
 		A4E40F3118F5B94A002E63E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F2F18F5B94A002E63E9 /* InfoPlist.strings */; };
 		A4E40F3318F5B94A002E63E9 /* dragonscaveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F3218F5B94A002E63E9 /* dragonscaveTests.m */; };
+		A4E40F4018F5BAD4002E63E9 /* SKScrollingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F3D18F5BAD4002E63E9 /* SKScrollingNode.m */; };
+		A4E40F4118F5BAD4002E63E9 /* DragonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F3F18F5BAD4002E63E9 /* DragonNode.m */; };
+		A4E40F4418F5BAE5002E63E9 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F4318F5BAE5002E63E9 /* Math.m */; };
+		A4E40F6518F5BD8F002E63E9 /* medal_silver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F4718F5BD8F002E63E9 /* medal_silver@2x.png */; };
+		A4E40F6618F5BD8F002E63E9 /* medal_gold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F4818F5BD8F002E63E9 /* medal_gold@2x.png */; };
+		A4E40F6718F5BD8F002E63E9 /* medal_bronze@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F4918F5BD8F002E63E9 /* medal_bronze@2x.png */; };
+		A4E40F6818F5BD8F002E63E9 /* cave2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F4A18F5BD8F002E63E9 /* cave2@2x.png */; };
+		A4E40F6C18F5BD8F002E63E9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F4E18F5BD8F002E63E9 /* back@2x.png */; };
+		A4E40F6E18F5BD8F002E63E9 /* medal_plate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5018F5BD8F002E63E9 /* medal_plate@2x.png */; };
+		A4E40F6F18F5BD8F002E63E9 /* game_over@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5118F5BD8F002E63E9 /* game_over@2x.png */; };
+		A4E40F7018F5BD8F002E63E9 /* fogo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5218F5BD8F002E63E9 /* fogo2@2x.png */; };
+		A4E40F7118F5BD8F002E63E9 /* medal_platinum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5318F5BD8F002E63E9 /* medal_platinum@2x.png */; };
+		A4E40F7218F5BD8F002E63E9 /* taptap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5418F5BD8F002E63E9 /* taptap@2x.png */; };
+		A4E40F7318F5BD8F002E63E9 /* get_ready@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5518F5BD8F002E63E9 /* get_ready@2x.png */; };
+		A4E40F7418F5BD8F002E63E9 /* floor4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5618F5BD8F002E63E9 /* floor4@2x.png */; };
+		A4E40F7518F5BD8F002E63E9 /* floor2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5718F5BD8F002E63E9 /* floor2.png */; };
+		A4E40F7618F5BD8F002E63E9 /* dragon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5818F5BD8F002E63E9 /* dragon_1.png */; };
+		A4E40F7718F5BD8F002E63E9 /* dragon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5918F5BD8F002E63E9 /* dragon_2.png */; };
+		A4E40F7818F5BD8F002E63E9 /* dragon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5A18F5BD8F002E63E9 /* dragon_3.png */; };
+		A4E40F7918F5BD8F002E63E9 /* dragao1.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5B18F5BD8F002E63E9 /* dragao1.png */; };
+		A4E40F7A18F5BD8F002E63E9 /* dragao2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5C18F5BD8F002E63E9 /* dragao2.png */; };
+		A4E40F7B18F5BD8F002E63E9 /* dragao3.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5D18F5BD8F002E63E9 /* dragao3.png */; };
+		A4E40F7C18F5BD8F002E63E9 /* dragao_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5E18F5BD8F002E63E9 /* dragao_icon.png */; };
+		A4E40F7D18F5BD8F002E63E9 /* floor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F5F18F5BD8F002E63E9 /* floor@2x.png */; };
+		A4E40F7E18F5BD8F002E63E9 /* dragon3.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6018F5BD8F002E63E9 /* dragon3.png */; };
+		A4E40F7F18F5BD8F002E63E9 /* dragon2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6118F5BD8F002E63E9 /* dragon2.png */; };
+		A4E40F8018F5BD8F002E63E9 /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6218F5BD8F002E63E9 /* dragon.png */; };
+		A4E40F8118F5BD8F002E63E9 /* pipe_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6318F5BD8F002E63E9 /* pipe_top@2x.png */; };
+		A4E40F8218F5BD8F002E63E9 /* pipe_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6418F5BD8F002E63E9 /* pipe_bottom@2x.png */; };
+		A4E40F8918F5BE7A002E63E9 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F8818F5BE7A002E63E9 /* Score.m */; };
+		A4E40F9118F5C224002E63E9 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F9018F5C224002E63E9 /* back1@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,15 +83,51 @@
 		A4E40F1518F5B94A002E63E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A4E40F1718F5B94A002E63E9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A4E40F1818F5B94A002E63E9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A4E40F1A18F5B94A002E63E9 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		A4E40F1B18F5B94A002E63E9 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		A4E40F1D18F5B94A002E63E9 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		A4E40F1A18F5B94A002E63E9 /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A4E40F1B18F5B94A002E63E9 /* Scene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		A4E40F1F18F5B94A002E63E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4E40F2518F5B94A002E63E9 /* dragonscaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dragonscaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E40F2618F5B94A002E63E9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A4E40F2E18F5B94A002E63E9 /* dragonscaveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dragonscaveTests-Info.plist"; sourceTree = "<group>"; };
 		A4E40F3018F5B94A002E63E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4E40F3218F5B94A002E63E9 /* dragonscaveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dragonscaveTests.m; sourceTree = "<group>"; };
+		A4E40F3C18F5BAD4002E63E9 /* SKScrollingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKScrollingNode.h; sourceTree = "<group>"; };
+		A4E40F3D18F5BAD4002E63E9 /* SKScrollingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKScrollingNode.m; sourceTree = "<group>"; };
+		A4E40F3E18F5BAD4002E63E9 /* DragonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragonNode.h; sourceTree = "<group>"; };
+		A4E40F3F18F5BAD4002E63E9 /* DragonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragonNode.m; sourceTree = "<group>"; };
+		A4E40F4218F5BAE5002E63E9 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		A4E40F4318F5BAE5002E63E9 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
+		A4E40F4718F5BD8F002E63E9 /* medal_silver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_silver@2x.png"; sourceTree = "<group>"; };
+		A4E40F4818F5BD8F002E63E9 /* medal_gold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_gold@2x.png"; sourceTree = "<group>"; };
+		A4E40F4918F5BD8F002E63E9 /* medal_bronze@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_bronze@2x.png"; sourceTree = "<group>"; };
+		A4E40F4A18F5BD8F002E63E9 /* cave2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cave2@2x.png"; sourceTree = "<group>"; };
+		A4E40F4E18F5BD8F002E63E9 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		A4E40F5018F5BD8F002E63E9 /* medal_plate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_plate@2x.png"; sourceTree = "<group>"; };
+		A4E40F5118F5BD8F002E63E9 /* game_over@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game_over@2x.png"; sourceTree = "<group>"; };
+		A4E40F5218F5BD8F002E63E9 /* fogo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fogo2@2x.png"; sourceTree = "<group>"; };
+		A4E40F5318F5BD8F002E63E9 /* medal_platinum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_platinum@2x.png"; sourceTree = "<group>"; };
+		A4E40F5418F5BD8F002E63E9 /* taptap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taptap@2x.png"; sourceTree = "<group>"; };
+		A4E40F5518F5BD8F002E63E9 /* get_ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get_ready@2x.png"; sourceTree = "<group>"; };
+		A4E40F5618F5BD8F002E63E9 /* floor4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floor4@2x.png"; sourceTree = "<group>"; };
+		A4E40F5718F5BD8F002E63E9 /* floor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor2.png; sourceTree = "<group>"; };
+		A4E40F5818F5BD8F002E63E9 /* dragon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon_1.png; sourceTree = "<group>"; };
+		A4E40F5918F5BD8F002E63E9 /* dragon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon_2.png; sourceTree = "<group>"; };
+		A4E40F5A18F5BD8F002E63E9 /* dragon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon_3.png; sourceTree = "<group>"; };
+		A4E40F5B18F5BD8F002E63E9 /* dragao1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao1.png; sourceTree = "<group>"; };
+		A4E40F5C18F5BD8F002E63E9 /* dragao2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao2.png; sourceTree = "<group>"; };
+		A4E40F5D18F5BD8F002E63E9 /* dragao3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao3.png; sourceTree = "<group>"; };
+		A4E40F5E18F5BD8F002E63E9 /* dragao_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao_icon.png; sourceTree = "<group>"; };
+		A4E40F5F18F5BD8F002E63E9 /* floor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floor@2x.png"; sourceTree = "<group>"; };
+		A4E40F6018F5BD8F002E63E9 /* dragon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon3.png; sourceTree = "<group>"; };
+		A4E40F6118F5BD8F002E63E9 /* dragon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon2.png; sourceTree = "<group>"; };
+		A4E40F6218F5BD8F002E63E9 /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon.png; sourceTree = "<group>"; };
+		A4E40F6318F5BD8F002E63E9 /* pipe_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipe_top@2x.png"; sourceTree = "<group>"; };
+		A4E40F6418F5BD8F002E63E9 /* pipe_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipe_bottom@2x.png"; sourceTree = "<group>"; };
+		A4E40F8418F5BE4F002E63E9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		A4E40F8518F5BE4F002E63E9 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A4E40F8718F5BE7A002E63E9 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		A4E40F8818F5BE7A002E63E9 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		A4E40F9018F5C224002E63E9 /* back1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,16 +189,8 @@
 		A4E40F0518F5B94A002E63E9 /* dragonscave */ = {
 			isa = PBXGroup;
 			children = (
-				A4E40F0E18F5B94A002E63E9 /* AppDelegate.h */,
-				A4E40F0F18F5B94A002E63E9 /* AppDelegate.m */,
-				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
-				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
-				A4E40F1718F5B94A002E63E9 /* ViewController.h */,
-				A4E40F1818F5B94A002E63E9 /* ViewController.m */,
-				A4E40F1A18F5B94A002E63E9 /* MyScene.h */,
-				A4E40F1B18F5B94A002E63E9 /* MyScene.m */,
-				A4E40F1D18F5B94A002E63E9 /* Spaceship.png */,
-				A4E40F1F18F5B94A002E63E9 /* Images.xcassets */,
+				A4E40F8318F5BDF7002E63E9 /* Classes */,
+				A4E40F8E18F5BF19002E63E9 /* Resources */,
 				A4E40F0618F5B94A002E63E9 /* Supporting Files */,
 			);
 			path = dragonscave;
@@ -165,6 +223,114 @@
 				A4E40F2F18F5B94A002E63E9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4E40F8318F5BDF7002E63E9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F0E18F5B94A002E63E9 /* AppDelegate.h */,
+				A4E40F0F18F5B94A002E63E9 /* AppDelegate.m */,
+				A4E40F8418F5BE4F002E63E9 /* Macros.h */,
+				A4E40F8518F5BE4F002E63E9 /* Constants.h */,
+				A4E40F8618F5BE64002E63E9 /* Models */,
+				A4E40F8A18F5BE7F002E63E9 /* Controllers */,
+				A4E40F8B18F5BEAA002E63E9 /* Scenes */,
+				A4E40F8D18F5BEE2002E63E9 /* Helpers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A4E40F8618F5BE64002E63E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F8718F5BE7A002E63E9 /* Score.h */,
+				A4E40F8818F5BE7A002E63E9 /* Score.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A4E40F8A18F5BE7F002E63E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F1718F5B94A002E63E9 /* ViewController.h */,
+				A4E40F1818F5B94A002E63E9 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A4E40F8B18F5BEAA002E63E9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F1A18F5B94A002E63E9 /* Scene.h */,
+				A4E40F1B18F5B94A002E63E9 /* Scene.m */,
+				A4E40F8C18F5BEC4002E63E9 /* Nodes */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		A4E40F8C18F5BEC4002E63E9 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F3C18F5BAD4002E63E9 /* SKScrollingNode.h */,
+				A4E40F3D18F5BAD4002E63E9 /* SKScrollingNode.m */,
+				A4E40F3E18F5BAD4002E63E9 /* DragonNode.h */,
+				A4E40F3F18F5BAD4002E63E9 /* DragonNode.m */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		A4E40F8D18F5BEE2002E63E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F4218F5BAE5002E63E9 /* Math.h */,
+				A4E40F4318F5BAE5002E63E9 /* Math.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		A4E40F8E18F5BF19002E63E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
+				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
+				A4E40F8F18F5BF46002E63E9 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A4E40F8F18F5BF46002E63E9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F4718F5BD8F002E63E9 /* medal_silver@2x.png */,
+				A4E40F4818F5BD8F002E63E9 /* medal_gold@2x.png */,
+				A4E40F4918F5BD8F002E63E9 /* medal_bronze@2x.png */,
+				A4E40F4A18F5BD8F002E63E9 /* cave2@2x.png */,
+				A4E40F4E18F5BD8F002E63E9 /* back@2x.png */,
+				A4E40F9018F5C224002E63E9 /* back1@2x.png */,
+				A4E40F5018F5BD8F002E63E9 /* medal_plate@2x.png */,
+				A4E40F5118F5BD8F002E63E9 /* game_over@2x.png */,
+				A4E40F5218F5BD8F002E63E9 /* fogo2@2x.png */,
+				A4E40F5318F5BD8F002E63E9 /* medal_platinum@2x.png */,
+				A4E40F5418F5BD8F002E63E9 /* taptap@2x.png */,
+				A4E40F5518F5BD8F002E63E9 /* get_ready@2x.png */,
+				A4E40F5618F5BD8F002E63E9 /* floor4@2x.png */,
+				A4E40F5718F5BD8F002E63E9 /* floor2.png */,
+				A4E40F5818F5BD8F002E63E9 /* dragon_1.png */,
+				A4E40F5918F5BD8F002E63E9 /* dragon_2.png */,
+				A4E40F5A18F5BD8F002E63E9 /* dragon_3.png */,
+				A4E40F5B18F5BD8F002E63E9 /* dragao1.png */,
+				A4E40F5C18F5BD8F002E63E9 /* dragao2.png */,
+				A4E40F5D18F5BD8F002E63E9 /* dragao3.png */,
+				A4E40F5E18F5BD8F002E63E9 /* dragao_icon.png */,
+				A4E40F5F18F5BD8F002E63E9 /* floor@2x.png */,
+				A4E40F6018F5BD8F002E63E9 /* dragon3.png */,
+				A4E40F6118F5BD8F002E63E9 /* dragon2.png */,
+				A4E40F6218F5BD8F002E63E9 /* dragon.png */,
+				A4E40F6318F5BD8F002E63E9 /* pipe_top@2x.png */,
+				A4E40F6418F5BD8F002E63E9 /* pipe_bottom@2x.png */,
+				A4E40F1F18F5B94A002E63E9 /* Images.xcassets */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,11 +409,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E40F1E18F5B94A002E63E9 /* Spaceship.png in Resources */,
+				A4E40F7118F5BD8F002E63E9 /* medal_platinum@2x.png in Resources */,
+				A4E40F8118F5BD8F002E63E9 /* pipe_top@2x.png in Resources */,
 				A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */,
+				A4E40F6818F5BD8F002E63E9 /* cave2@2x.png in Resources */,
+				A4E40F8018F5BD8F002E63E9 /* dragon.png in Resources */,
+				A4E40F6C18F5BD8F002E63E9 /* back@2x.png in Resources */,
+				A4E40F6F18F5BD8F002E63E9 /* game_over@2x.png in Resources */,
+				A4E40F7A18F5BD8F002E63E9 /* dragao2.png in Resources */,
+				A4E40F6518F5BD8F002E63E9 /* medal_silver@2x.png in Resources */,
+				A4E40F7518F5BD8F002E63E9 /* floor2.png in Resources */,
+				A4E40F7918F5BD8F002E63E9 /* dragao1.png in Resources */,
+				A4E40F7E18F5BD8F002E63E9 /* dragon3.png in Resources */,
+				A4E40F7618F5BD8F002E63E9 /* dragon_1.png in Resources */,
+				A4E40F6E18F5BD8F002E63E9 /* medal_plate@2x.png in Resources */,
+				A4E40F7D18F5BD8F002E63E9 /* floor@2x.png in Resources */,
+				A4E40F9118F5C224002E63E9 /* back1@2x.png in Resources */,
+				A4E40F7718F5BD8F002E63E9 /* dragon_2.png in Resources */,
+				A4E40F7018F5BD8F002E63E9 /* fogo2@2x.png in Resources */,
+				A4E40F8218F5BD8F002E63E9 /* pipe_bottom@2x.png in Resources */,
+				A4E40F7318F5BD8F002E63E9 /* get_ready@2x.png in Resources */,
+				A4E40F7218F5BD8F002E63E9 /* taptap@2x.png in Resources */,
+				A4E40F7B18F5BD8F002E63E9 /* dragao3.png in Resources */,
+				A4E40F7418F5BD8F002E63E9 /* floor4@2x.png in Resources */,
 				A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */,
+				A4E40F7818F5BD8F002E63E9 /* dragon_3.png in Resources */,
 				A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */,
+				A4E40F6618F5BD8F002E63E9 /* medal_gold@2x.png in Resources */,
+				A4E40F7C18F5BD8F002E63E9 /* dragao_icon.png in Resources */,
+				A4E40F7F18F5BD8F002E63E9 /* dragon2.png in Resources */,
 				A4E40F0A18F5B94A002E63E9 /* InfoPlist.strings in Resources */,
+				A4E40F6718F5BD8F002E63E9 /* medal_bronze@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E40F1C18F5B94A002E63E9 /* MyScene.m in Sources */,
+				A4E40F4118F5BAD4002E63E9 /* DragonNode.m in Sources */,
+				A4E40F1C18F5B94A002E63E9 /* Scene.m in Sources */,
+				A4E40F4418F5BAE5002E63E9 /* Math.m in Sources */,
+				A4E40F4018F5BAD4002E63E9 /* SKScrollingNode.m in Sources */,
 				A4E40F1918F5B94A002E63E9 /* ViewController.m in Sources */,
 				A4E40F1018F5B94A002E63E9 /* AppDelegate.m in Sources */,
+				A4E40F8918F5BE7A002E63E9 /* Score.m in Sources */,
 				A4E40F0C18F5B94A002E63E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +682,7 @@
 				A4E40F3818F5B94A002E63E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4E40F3918F5B94A002E63E9 /* Build configuration list for PBXNativeTarget "dragonscaveTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +691,7 @@
 				A4E40F3B18F5B94A002E63E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
