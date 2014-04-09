@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4E40EFE18F5B94A002E63E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFD18F5B94A002E63E9 /* Foundation.framework */; };
+		A4E40F0018F5B94A002E63E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */; };
+		A4E40F0218F5B94A002E63E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F0118F5B94A002E63E9 /* UIKit.framework */; };
+		A4E40F0418F5B94A002E63E9 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F0318F5B94A002E63E9 /* SpriteKit.framework */; };
+		A4E40F0A18F5B94A002E63E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F0818F5B94A002E63E9 /* InfoPlist.strings */; };
+		A4E40F0C18F5B94A002E63E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F0B18F5B94A002E63E9 /* main.m */; };
+		A4E40F1018F5B94A002E63E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F0F18F5B94A002E63E9 /* AppDelegate.m */; };
+		A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */; };
+		A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */; };
+		A4E40F1918F5B94A002E63E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F1818F5B94A002E63E9 /* ViewController.m */; };
+		A4E40F1C18F5B94A002E63E9 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F1B18F5B94A002E63E9 /* MyScene.m */; };
+		A4E40F1E18F5B94A002E63E9 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1D18F5B94A002E63E9 /* Spaceship.png */; };
+		A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F1F18F5B94A002E63E9 /* Images.xcassets */; };
+		A4E40F2718F5B94A002E63E9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F2618F5B94A002E63E9 /* XCTest.framework */; };
+		A4E40F2818F5B94A002E63E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFD18F5B94A002E63E9 /* Foundation.framework */; };
+		A4E40F2918F5B94A002E63E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F0118F5B94A002E63E9 /* UIKit.framework */; };
+		A4E40F3118F5B94A002E63E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F2F18F5B94A002E63E9 /* InfoPlist.strings */; };
+		A4E40F3318F5B94A002E63E9 /* dragonscaveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F3218F5B94A002E63E9 /* dragonscaveTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4E40F2A18F5B94A002E63E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4E40EF218F5B94A002E63E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E40EF918F5B94A002E63E9;
+			remoteInfo = dragonscave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4E40EFA18F5B94A002E63E9 /* dragonscave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dragonscave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E40EFD18F5B94A002E63E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A4E40F0118F5B94A002E63E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A4E40F0318F5B94A002E63E9 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A4E40F0718F5B94A002E63E9 /* dragonscave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dragonscave-Info.plist"; sourceTree = "<group>"; };
+		A4E40F0918F5B94A002E63E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A4E40F0B18F5B94A002E63E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4E40F0D18F5B94A002E63E9 /* dragonscave-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dragonscave-Prefix.pch"; sourceTree = "<group>"; };
+		A4E40F0E18F5B94A002E63E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4E40F0F18F5B94A002E63E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4E40F1218F5B94A002E63E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A4E40F1518F5B94A002E63E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A4E40F1718F5B94A002E63E9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A4E40F1818F5B94A002E63E9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A4E40F1A18F5B94A002E63E9 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		A4E40F1B18F5B94A002E63E9 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		A4E40F1D18F5B94A002E63E9 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		A4E40F1F18F5B94A002E63E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A4E40F2518F5B94A002E63E9 /* dragonscaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dragonscaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E40F2618F5B94A002E63E9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A4E40F2E18F5B94A002E63E9 /* dragonscaveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dragonscaveTests-Info.plist"; sourceTree = "<group>"; };
+		A4E40F3018F5B94A002E63E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A4E40F3218F5B94A002E63E9 /* dragonscaveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dragonscaveTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4E40EF718F5B94A002E63E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F0018F5B94A002E63E9 /* CoreGraphics.framework in Frameworks */,
+				A4E40F0218F5B94A002E63E9 /* UIKit.framework in Frameworks */,
+				A4E40F0418F5B94A002E63E9 /* SpriteKit.framework in Frameworks */,
+				A4E40EFE18F5B94A002E63E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E40F2218F5B94A002E63E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F2718F5B94A002E63E9 /* XCTest.framework in Frameworks */,
+				A4E40F2918F5B94A002E63E9 /* UIKit.framework in Frameworks */,
+				A4E40F2818F5B94A002E63E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4E40EF118F5B94A002E63E9 = {
+			isa = PBXGroup;
+			children = (
+				A4E40F0518F5B94A002E63E9 /* dragonscave */,
+				A4E40F2C18F5B94A002E63E9 /* dragonscaveTests */,
+				A4E40EFC18F5B94A002E63E9 /* Frameworks */,
+				A4E40EFB18F5B94A002E63E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4E40EFB18F5B94A002E63E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40EFA18F5B94A002E63E9 /* dragonscave.app */,
+				A4E40F2518F5B94A002E63E9 /* dragonscaveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4E40EFC18F5B94A002E63E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40EFD18F5B94A002E63E9 /* Foundation.framework */,
+				A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */,
+				A4E40F0118F5B94A002E63E9 /* UIKit.framework */,
+				A4E40F0318F5B94A002E63E9 /* SpriteKit.framework */,
+				A4E40F2618F5B94A002E63E9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4E40F0518F5B94A002E63E9 /* dragonscave */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F0E18F5B94A002E63E9 /* AppDelegate.h */,
+				A4E40F0F18F5B94A002E63E9 /* AppDelegate.m */,
+				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
+				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
+				A4E40F1718F5B94A002E63E9 /* ViewController.h */,
+				A4E40F1818F5B94A002E63E9 /* ViewController.m */,
+				A4E40F1A18F5B94A002E63E9 /* MyScene.h */,
+				A4E40F1B18F5B94A002E63E9 /* MyScene.m */,
+				A4E40F1D18F5B94A002E63E9 /* Spaceship.png */,
+				A4E40F1F18F5B94A002E63E9 /* Images.xcassets */,
+				A4E40F0618F5B94A002E63E9 /* Supporting Files */,
+			);
+			path = dragonscave;
+			sourceTree = "<group>";
+		};
+		A4E40F0618F5B94A002E63E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F0718F5B94A002E63E9 /* dragonscave-Info.plist */,
+				A4E40F0818F5B94A002E63E9 /* InfoPlist.strings */,
+				A4E40F0B18F5B94A002E63E9 /* main.m */,
+				A4E40F0D18F5B94A002E63E9 /* dragonscave-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4E40F2C18F5B94A002E63E9 /* dragonscaveTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F3218F5B94A002E63E9 /* dragonscaveTests.m */,
+				A4E40F2D18F5B94A002E63E9 /* Supporting Files */,
+			);
+			path = dragonscaveTests;
+			sourceTree = "<group>";
+		};
+		A4E40F2D18F5B94A002E63E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4E40F2E18F5B94A002E63E9 /* dragonscaveTests-Info.plist */,
+				A4E40F2F18F5B94A002E63E9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4E40EF918F5B94A002E63E9 /* dragonscave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E40F3618F5B94A002E63E9 /* Build configuration list for PBXNativeTarget "dragonscave" */;
+			buildPhases = (
+				A4E40EF618F5B94A002E63E9 /* Sources */,
+				A4E40EF718F5B94A002E63E9 /* Frameworks */,
+				A4E40EF818F5B94A002E63E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dragonscave;
+			productName = dragonscave;
+			productReference = A4E40EFA18F5B94A002E63E9 /* dragonscave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4E40F2418F5B94A002E63E9 /* dragonscaveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E40F3918F5B94A002E63E9 /* Build configuration list for PBXNativeTarget "dragonscaveTests" */;
+			buildPhases = (
+				A4E40F2118F5B94A002E63E9 /* Sources */,
+				A4E40F2218F5B94A002E63E9 /* Frameworks */,
+				A4E40F2318F5B94A002E63E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4E40F2B18F5B94A002E63E9 /* PBXTargetDependency */,
+			);
+			name = dragonscaveTests;
+			productName = dragonscaveTests;
+			productReference = A4E40F2518F5B94A002E63E9 /* dragonscaveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4E40EF218F5B94A002E63E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Luiz Fernando Ramos Cardozo";
+				TargetAttributes = {
+					A4E40F2418F5B94A002E63E9 = {
+						TestTargetID = A4E40EF918F5B94A002E63E9;
+					};
+				};
+			};
+			buildConfigurationList = A4E40EF518F5B94A002E63E9 /* Build configuration list for PBXProject "dragonscave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4E40EF118F5B94A002E63E9;
+			productRefGroup = A4E40EFB18F5B94A002E63E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4E40EF918F5B94A002E63E9 /* dragonscave */,
+				A4E40F2418F5B94A002E63E9 /* dragonscaveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4E40EF818F5B94A002E63E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F1E18F5B94A002E63E9 /* Spaceship.png in Resources */,
+				A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */,
+				A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */,
+				A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */,
+				A4E40F0A18F5B94A002E63E9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E40F2318F5B94A002E63E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F3118F5B94A002E63E9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4E40EF618F5B94A002E63E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F1C18F5B94A002E63E9 /* MyScene.m in Sources */,
+				A4E40F1918F5B94A002E63E9 /* ViewController.m in Sources */,
+				A4E40F1018F5B94A002E63E9 /* AppDelegate.m in Sources */,
+				A4E40F0C18F5B94A002E63E9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E40F2118F5B94A002E63E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E40F3318F5B94A002E63E9 /* dragonscaveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4E40F2B18F5B94A002E63E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E40EF918F5B94A002E63E9 /* dragonscave */;
+			targetProxy = A4E40F2A18F5B94A002E63E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4E40F0818F5B94A002E63E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E40F0918F5B94A002E63E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E40F1218F5B94A002E63E9 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E40F1518F5B94A002E63E9 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A4E40F2F18F5B94A002E63E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E40F3018F5B94A002E63E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4E40F3418F5B94A002E63E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4E40F3518F5B94A002E63E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4E40F3718F5B94A002E63E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
+				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A4E40F3818F5B94A002E63E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
+				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A4E40F3A18F5B94A002E63E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/dragonscave.app/dragonscave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "dragonscaveTests/dragonscaveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A4E40F3B18F5B94A002E63E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/dragonscave.app/dragonscave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
+				INFOPLIST_FILE = "dragonscaveTests/dragonscaveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4E40EF518F5B94A002E63E9 /* Build configuration list for PBXProject "dragonscave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E40F3418F5B94A002E63E9 /* Debug */,
+				A4E40F3518F5B94A002E63E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E40F3618F5B94A002E63E9 /* Build configuration list for PBXNativeTarget "dragonscave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E40F3718F5B94A002E63E9 /* Debug */,
+				A4E40F3818F5B94A002E63E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A4E40F3918F5B94A002E63E9 /* Build configuration list for PBXNativeTarget "dragonscaveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E40F3A18F5B94A002E63E9 /* Debug */,
+				A4E40F3B18F5B94A002E63E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4E40EF218F5B94A002E63E9 /* Project object */;
+}
