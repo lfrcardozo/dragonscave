@@ -396,7 +396,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     // 2 - Set up initial location of projectile
     SKSpriteNode * projectile = [SKSpriteNode spriteNodeWithImageNamed:@"fogo2"];
     projectile.position = CGPointMake((dragon.position.x + 20), (dragon.position.y - 5));//dragon.position + (dragon.size.width);
-    projectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:projectile.size.width/2];
+    projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)];
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.categoryBitMask = projectileCategory;
     projectile.physicsBody.contactTestBitMask = monsterCategory;
