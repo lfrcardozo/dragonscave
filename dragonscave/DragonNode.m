@@ -69,7 +69,7 @@ static bool goingUp = false;
 - (void) startPlaying
 {
     deltaPosY = 0;
-    [self setPhysicsBody:[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(26, 18)]];
+    [self setPhysicsBody:[SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(33, 28)]];//CGSizeMake(26, 18)]];
     self.physicsBody.categoryBitMask = dragonBitMask;
     self.physicsBody.dynamic = YES; //testeeeee
     self.physicsBody.mass = 0.1;

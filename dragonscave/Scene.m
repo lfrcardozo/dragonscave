@@ -261,11 +261,6 @@ static bool wasted = NO;
     // Create sprite
     SKSpriteNode * monster = [SKSpriteNode spriteNodeWithImageNamed:@"medal_gold"];
     
-    monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
-    monster.physicsBody.dynamic = YES; // 2
-    monster.physicsBody.categoryBitMask = monsterCategory; // 3
-    monster.physicsBody.contactTestBitMask = projectileCategory; // 4
-   // monster.physicsBody.collisionBitMask = 0; // 5
     
     // Determine where to spawn the monster along the Y axis
     int minY = monster.size.height / 2;
@@ -276,6 +271,12 @@ static bool wasted = NO;
     // Create the monster slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
+    monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)]; // funcionando [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];
+    monster.physicsBody.dynamic = YES; // 2
+    monster.physicsBody.categoryBitMask = monsterCategory; // 3
+    monster.physicsBody.contactTestBitMask = projectileCategory; // 4
+    monster.physicsBody.collisionBitMask = 0; // 5
+
     [self addChild:monster];
     
     // Determine speed of the monster
@@ -304,7 +305,7 @@ static bool wasted = NO;
     }
 }
 
-#pragma mark - Physic
+//#pragma mark - Physic
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
