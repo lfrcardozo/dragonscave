@@ -265,7 +265,7 @@ static bool wasted = NO;
     monster.physicsBody.dynamic = YES; // 2
     monster.physicsBody.categoryBitMask = monsterCategory; // 3
     monster.physicsBody.contactTestBitMask = projectileCategory; // 4
-    monster.physicsBody.collisionBitMask = 0; // 5
+   // monster.physicsBody.collisionBitMask = 0; // 5
     
     // Determine where to spawn the monster along the Y axis
     int minY = monster.size.height / 2;
@@ -347,6 +347,14 @@ static bool wasted = NO;
         [self.delegate eventWasted];
     }
     
+    /*if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
+        (secondBody.categoryBitMask & backBitMask) !=0)
+    {
+        wasted = true;
+        [Score registerScore:self.score];
+        [self.delegate eventWasted];
+    }*/
+    
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
         (secondBody.categoryBitMask & monsterCategory) !=0)
     {
@@ -386,7 +394,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     // 2 - Set up initial location of projectile
     SKSpriteNode * projectile = [SKSpriteNode spriteNodeWithImageNamed:@"fogo2"];
-    projectile.position = dragon.position;
+    projectile.position = CGPointMake((dragon.position.x + 20), (dragon.position.y - 5));//dragon.position + (dragon.size.width);
     projectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:projectile.size.width/2];
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.categoryBitMask = projectileCategory;

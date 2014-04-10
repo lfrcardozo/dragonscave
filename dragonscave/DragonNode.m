@@ -71,6 +71,7 @@ static bool goingUp = false;
     deltaPosY = 0;
     [self setPhysicsBody:[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(26, 18)]];
     self.physicsBody.categoryBitMask = dragonBitMask;
+    self.physicsBody.dynamic = YES; //testeeeee
     self.physicsBody.mass = 0.1;
     [self removeActionForKey:@"flapForever"];
 }
