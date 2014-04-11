@@ -147,6 +147,7 @@ static bool wasted = NO;
 #pragma mark - Interaction
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+         [self.scene.view setPaused:NO];
     if (    self.scene.view.isPaused==NO){
     if(wasted){
         [self startGame];
@@ -160,13 +161,10 @@ static bool wasted = NO;
         [dragon bounce];
     }
     }
-    else{
-        [self.scene.view setPaused:NO];
+    
+   
 
-        if(wasted){
-            [self startGame];
-        }
-    }
+    
 }
 
 #pragma mark - Update & Core logic
