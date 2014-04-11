@@ -93,7 +93,7 @@
         self.gameOverView.alpha = 1;
         self.gameOverView.transform = CGAffineTransformMakeScale(1, 1);
         
-        // Set medal
+        /* Set medal
         if(scene.score >= 40){
             self.medalImageView.image = [UIImage imageNamed:@"medal_platinum"];
         }else if (scene.score >= 30){
@@ -104,7 +104,7 @@
             self.medalImageView.image = [UIImage imageNamed:@"medal_bronze"];
         }else{
             self.medalImageView.image = nil;
-        }
+        }*/
         
         // Set scores
         self.currentScore.text = F(@"%li",(long)scene.score);

@@ -44,8 +44,7 @@ static bool wasted = NO;
     return self;
 }
 
-- (void) startGame
-{
+- (void) startGame {
     // Reinit
     wasted = NO;
     
@@ -60,15 +59,14 @@ static bool wasted = NO;
     // Floor needs to be in front of tubes
     floor.zPosition = dragon.zPosition + 1;
     
-    if([self.delegate respondsToSelector:@selector(eventStart)]){
+    if([self.delegate respondsToSelector:@selector(eventStart)]) {
         [self.delegate eventStart];
     }
 }
 
 #pragma mark - Creations
 
-- (void) createBackground
-{
+- (void) createBackground {
     back = [SKScrollingNode scrollingNodeWithImageNamed:@"back1" inContainerWidth:WIDTH(self)];
     [back setScrollingSpeed:BACK_SCROLLING_SPEED];
     [back setAnchorPoint: CGPointZero];
@@ -78,11 +76,7 @@ static bool wasted = NO;
     [self addChild:back];
 }
 
-
-
-
-- (void) createScore
-{
+- (void) createScore {
     self.score = 0;
     scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Bold"];
     scoreLabel.text = @"0";
@@ -93,8 +87,7 @@ static bool wasted = NO;
 }
 
 
-- (void)createFloor
-{
+- (void)createFloor {
     floor = [SKScrollingNode scrollingNodeWithImageNamed:@"floor4" inContainerWidth:WIDTH(self)];
     [floor setScrollingSpeed:FLOOR_SCROLLING_SPEED];
     [floor setAnchorPoint:CGPointZero];
@@ -105,16 +98,14 @@ static bool wasted = NO;
     [self addChild:floor];
 }
 
-- (void)createDragon
-{
+- (void)createDragon {
     dragon = [DragonNode new];
     [dragon setPosition:CGPointMake(100, CGRectGetMidY(self.frame))];
     [dragon setName:@"dragon"];
     [self addChild:dragon];
 }
 
-- (void) createObstacles
-{
+- (void) createObstacles {
     // Calculate how many obstacles we need, the less the better
     nbObstacles = ceil(WIDTH(self)/(OBSTACLE_INTERVAL_SPACE));
     
@@ -141,17 +132,15 @@ static bool wasted = NO;
         }
         lastBlockPos = topPipe.position.x;
     }
-    
 }
 
 #pragma mark - Interaction
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if(wasted){
+    if(wasted) {
         [self startGame];
-    }else{
-        if (!dragon.physicsBody) {
+    } else {
+        if(!dragon.physicsBody) {
             [dragon startPlaying];
             if([self.delegate respondsToSelector:@selector(eventPlay)]){
                 [self.delegate eventPlay];
@@ -162,17 +151,15 @@ static bool wasted = NO;
 }
 
 #pragma mark - Update & Core logic
-
-
-- (void)update:(NSTimeInterval)currentTime
-{
-    if(wasted){
+- (void)update:(NSTimeInterval)currentTime {
+    if(wasted) {
         return;
     }
     
     CFTimeInterval timeSinceLast = currentTime - self.lastUpdateTimeInterval;
     self.lastUpdateTimeInterval = currentTime;
-    if (timeSinceLast > 1) { // more than a second since last update
+    if (timeSinceLast > 1) {
+        // more than a second since last update
         timeSinceLast = 1.0 / 60.0;
         self.lastUpdateTimeInterval = currentTime;
     }
@@ -188,33 +175,29 @@ static bool wasted = NO;
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
 }
 
-
-- (void) updateObstacles:(NSTimeInterval)currentTime
-{
-    if(!dragon.physicsBody){
+- (void) updateObstacles:(NSTimeInterval)currentTime {
+    if(!dragon.physicsBody) {
         return;
     }
     
-    for(int i=0;i<nbObstacles;i++){
-        
+    for(int i=0;i<nbObstacles;i++) {
         // Get pipes bby pairs
         SKSpriteNode * topPipe = (SKSpriteNode *) topPipes[i];
         SKSpriteNode * bottomPipe = (SKSpriteNode *) bottomPipes[i];
         
         // Check if pair has exited screen, and place them upfront again
-        if (X(topPipe) < -WIDTH(topPipe)){
+        if (X(topPipe) < -WIDTH(topPipe)) {
             SKSpriteNode * mostRightPipe = (SKSpriteNode *) topPipes[(i+(nbObstacles-1))%nbObstacles];
             [self place:bottomPipe and:topPipe atX:X(mostRightPipe)+WIDTH(topPipe)+OBSTACLE_INTERVAL_SPACE];
         }
-        
+
         // Move according to the scrolling speed
         topPipe.position = CGPointMake(X(topPipe) - FLOOR_SCROLLING_SPEED, Y(topPipe));
         bottomPipe.position = CGPointMake(X(bottomPipe) - FLOOR_SCROLLING_SPEED, Y(bottomPipe));
     }
 }
 
-- (void) place:(SKSpriteNode *) bottomPipe and:(SKSpriteNode *) topPipe atX:(float) xPos
-{
+- (void) place:(SKSpriteNode *) bottomPipe and:(SKSpriteNode *) topPipe atX:(float) xPos {
     // Maths
     float availableSpace = HEIGHT(self) - HEIGHT(floor);
     float maxVariance = availableSpace - (2*OBSTACLE_MIN_HEIGHT) - VERTICAL_GAP_SIZE;
@@ -236,19 +219,16 @@ static bool wasted = NO;
     topPipe.physicsBody.contactTestBitMask = dragonBitMask;
 }
 
-
-- (void) updateScore:(NSTimeInterval) currentTime
-{
-    for(int i=0;i<nbObstacles;i++){
-        
+- (void) updateScore:(NSTimeInterval) currentTime {
+    for(int i=0;i<nbObstacles;i++) {
         SKSpriteNode * topPipe = (SKSpriteNode *) topPipes[i];
-        
+
         // Score, adapt font size
         if(X(topPipe) + WIDTH(topPipe)/2 > dragon.position.x &&
-           X(topPipe) + WIDTH(topPipe)/2 < dragon.position.x + FLOOR_SCROLLING_SPEED){
+           X(topPipe) + WIDTH(topPipe)/2 < dragon.position.x + FLOOR_SCROLLING_SPEED) {
             self.score +=1;
             scoreLabel.text = [NSString stringWithFormat:@"%lu",(long)self.score];
-            if(self.score>=10){
+            if(self.score>=10) {
                 scoreLabel.fontSize = 340;
                 scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);
             }
@@ -257,10 +237,8 @@ static bool wasted = NO;
 }
 
 - (void)addMonster {
-    
     // Create sprite
     SKSpriteNode * monster = [SKSpriteNode spriteNodeWithImageNamed:@"medal_gold"];
-    
     
     // Determine where to spawn the monster along the Y axis
     int minY = monster.size.height / 2;
@@ -268,15 +246,15 @@ static bool wasted = NO;
     int rangeY = maxY - minY;
     int actualY = (arc4random() % rangeY) + minY;
     
-    // Create the monster slightly off-screen along the right edge,
-    // and along a random position along the Y axis as calculated above
-    monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
-    monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)]; // funcionando[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];//
+    monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
     monster.physicsBody.dynamic = YES; // 2
     monster.physicsBody.categoryBitMask = monsterCategory; // 3
     monster.physicsBody.contactTestBitMask = projectileCategory; // 4
     monster.physicsBody.collisionBitMask = 0; // 5
-
+    
+    // Create the monster slightly off-screen along the right edge,
+    // and along a random position along the Y axis as calculated above
+    monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
     [self addChild:monster];
     
     // Determine speed of the monster
@@ -292,9 +270,44 @@ static bool wasted = NO;
     
 }
 
+/*
+ - (void)addMonster {
+ // Create sprite
+ SKSpriteNode * monster = [SKSpriteNode spriteNodeWithImageNamed:@"medal_gold"];
+ 
+ // Determine where to spawn the monster along the Y axis
+ int minY = monster.size.height / 2;
+ int maxY = self.frame.size.height - monster.size.height / 2;
+ int rangeY = maxY - minY;
+ int actualY = (arc4random() % rangeY) + minY;
+ 
+ // Create the monster slightly off-screen along the right edge,
+ // and along a random position along the Y axis as calculated above
+ monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
+ monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)]; // funcionando[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];//
+ monster.physicsBody.dynamic = YES; // 2
+ monster.physicsBody.categoryBitMask = monsterCategory; // 3
+ monster.physicsBody.contactTestBitMask = projectileCategory; // 4
+ monster.physicsBody.collisionBitMask = 0; // 5
+ 
+ [self addChild:monster];
+ 
+ // Determine speed of the monster
+ int minDuration = 2.0;
+ int maxDuration = 4.0;
+ int rangeDuration = maxDuration - minDuration;
+ int actualDuration = (arc4random() % rangeDuration) + minDuration;
+ 
+ // Create the actions
+ SKAction * actionMove = [SKAction moveTo:CGPointMake(-monster.size.width/2, actualY) duration:actualDuration];
+ SKAction * actionMoveDone = [SKAction removeFromParent];
+ [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
+ 
+ }
+ */
 
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
-    if(!dragon.physicsBody){
+    if(!dragon.physicsBody) {
         return;
     }
     
@@ -305,60 +318,50 @@ static bool wasted = NO;
     }
 }
 
-//#pragma mark - Physic
-
-- (void)didBeginContact:(SKPhysicsContact *)contact
-{
+#pragma mark - Physic
+- (void)didBeginContact:(SKPhysicsContact *)contact {
     if(wasted){ return; }
     
     SKPhysicsBody *firstBody, *secondBody;
     
-    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
-    {
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
         firstBody = contact.bodyA;
         secondBody = contact.bodyB;
-    }
-    else
-    {
+    } else {
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
     
     // 2
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
-        (secondBody.categoryBitMask & monsterCategory) != 0)
-    {
+        (secondBody.categoryBitMask & monsterCategory) != 0) {
         [self projectile:(SKSpriteNode *) firstBody.node didCollideWithMonster:(SKSpriteNode *) secondBody.node];
     }
     
     //3
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
-        (secondBody.categoryBitMask & blockBitMask) !=0)
-    {
+        (secondBody.categoryBitMask & blockBitMask) !=0) {
         wasted = true;
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
     
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
-        (secondBody.categoryBitMask & floorBitMask) !=0)
-    {
+        (secondBody.categoryBitMask & floorBitMask) !=0) {
         wasted = true;
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
     
     if ((firstBody.categoryBitMask & backBitMask) != 0 &&
-        (secondBody.categoryBitMask & dragonBitMask) !=0)
-    {
+        (secondBody.categoryBitMask & dragonBitMask) !=0) {
         wasted = true;
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
     
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
-        (secondBody.categoryBitMask & monsterCategory) !=0)
-    {
+        (secondBody.categoryBitMask & monsterCategory) !=0) {
         wasted = true;
         [Score registerScore:self.score];
         [self.delegate eventWasted];

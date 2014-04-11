@@ -23,36 +23,38 @@
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L7f-Eu-h8Z" userLabel="getReadyView">
                                         <rect key="frame" x="124" y="50" width="320" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="get_ready.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-UC-rsp">
+                                                <rect key="frame" x="30" y="11" width="260" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUQ-xo-pvv" userLabel="gameOverView">
                                         <rect key="frame" x="124" y="50" width="320" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_over.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-UC-rsp">
-                                                <rect key="frame" x="30" y="0.0" width="260" height="45"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_over.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Ef-5H-m4u">
+                                                <rect key="frame" x="30" y="9" width="260" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medal_plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="5RD-8g-d3L">
                                                 <rect key="frame" x="47" y="62" width="226" height="116"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medal_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-Zz-enl">
-                                                <rect key="frame" x="73" y="104" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0C-Tl-1an">
-                                                <rect key="frame" x="199" y="94" width="50" height="21"/>
+                                                <rect key="frame" x="135" y="99" width="50" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
-                                                <color key="textColor" red="0.34275350770000002" green="0.19899377779999999" blue="0.18746079290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aM-vv-idz">
-                                                <rect key="frame" x="199" y="135" width="50" height="21"/>
+                                                <rect key="frame" x="135" y="144" width="50" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
-                                                <color key="textColor" red="0.34275350770000002" green="0.19899377779999999" blue="0.18746079290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -73,7 +75,6 @@
                         <outlet property="gameOverView" destination="jUQ-xo-pvv" id="jmT-KA-abV"/>
                         <outlet property="gameView" destination="WSs-2w-tla" id="C3e-Dj-fKd"/>
                         <outlet property="getReadyView" destination="L7f-Eu-h8Z" id="jx9-wn-vYG"/>
-                        <outlet property="medalImageView" destination="dW4-Zz-enl" id="jJe-uI-nOq"/>
                         <outlet property="view" destination="bDM-GW-qaB" id="xUw-eu-Ewz"/>
                     </connections>
                 </viewController>
@@ -84,7 +85,7 @@
     </scenes>
     <resources>
         <image name="game_over.png" width="198" height="38"/>
-        <image name="medal_bronze.png" width="44" height="44"/>
+        <image name="get_ready.png" width="198" height="38"/>
         <image name="medal_plate.png" width="226" height="116"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

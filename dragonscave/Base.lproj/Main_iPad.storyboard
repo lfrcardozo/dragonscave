@@ -76,7 +76,7 @@
     </scenes>
     <resources>
         <image name="game_over.png" width="198" height="38"/>
-        <image name="get_ready.png" width="130" height="40"/>
+        <image name="get_ready.png" width="198" height="38"/>
         <image name="medal_bronze.png" width="44" height="44"/>
         <image name="medal_plate.png" width="226" height="116"/>
         <image name="taptap.png" width="120" height="100"/>
