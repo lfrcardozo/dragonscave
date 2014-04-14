@@ -409,10 +409,9 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     // 8 - Add the shoot amount to the current position
     CGPoint realDest = rwAdd(shootAmount, projectile.position);
-    projectile.zPosition = dragon.zPosition;
 
-    
-    projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
+    projectile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:projectile.size];
+    //projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.categoryBitMask = projectileCategory;
     projectile.physicsBody.contactTestBitMask = monsterCategory;
