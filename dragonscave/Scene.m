@@ -87,8 +87,8 @@ static bool wasted = NO;
     self.score = 0;
     scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Bold"];
     scoreLabel.text = @"0";
-    scoreLabel.fontSize = 150; //500;
-    scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 100);
+    scoreLabel.fontSize = 80; //500;
+    scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 150);
     scoreLabel.alpha = 0.2;
     [self addChild:scoreLabel];
 }
@@ -244,8 +244,8 @@ static bool wasted = NO;
             self.score +=1;
             scoreLabel.text = [NSString stringWithFormat:@"%lu",(long)self.score];
             if(self.score>=10) {
-                scoreLabel.fontSize = 340;
-                scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);
+                scoreLabel.fontSize = 80;
+                scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 150);
             }
         }
     }
