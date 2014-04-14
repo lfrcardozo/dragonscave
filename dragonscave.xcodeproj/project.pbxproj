@@ -59,6 +59,7 @@
 		A4E40F8218F5BD8F002E63E9 /* pipe_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F6418F5BD8F002E63E9 /* pipe_bottom@2x.png */; };
 		A4E40F8918F5BE7A002E63E9 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F8818F5BE7A002E63E9 /* Score.m */; };
 		A4E40F9118F5C224002E63E9 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F9018F5C224002E63E9 /* back1@2x.png */; };
+		E653BA7D18F865C500BDCE89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E653BA7C18F865C500BDCE89 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		A4E40F8718F5BE7A002E63E9 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		A4E40F8818F5BE7A002E63E9 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		A4E40F9018F5C224002E63E9 /* back1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back1@2x.png"; sourceTree = "<group>"; };
+		E653BA7C18F865C500BDCE89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		A4E40EF118F5B94A002E63E9 = {
 			isa = PBXGroup;
 			children = (
+				E653BA7C18F865C500BDCE89 /* Default-568h@2x.png */,
 				A4E40F0518F5B94A002E63E9 /* dragonscave */,
 				A4E40F2C18F5B94A002E63E9 /* dragonscaveTests */,
 				A4E40EFC18F5B94A002E63E9 /* Frameworks */,
@@ -421,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E653BA7D18F865C500BDCE89 /* Default-568h@2x.png in Resources */,
 				A4E40F7118F5BD8F002E63E9 /* medal_platinum@2x.png in Resources */,
 				A4E40F8118F5BD8F002E63E9 /* pipe_top@2x.png in Resources */,
 				A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */,
@@ -615,7 +619,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
@@ -629,7 +632,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";

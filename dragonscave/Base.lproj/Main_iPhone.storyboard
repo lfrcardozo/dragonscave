@@ -60,6 +60,17 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-su-Hwr">
+                                        <rect key="frame" x="450" y="0.0" width="113" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="PAUSE">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toqueParaPausar:" destination="Zj6-aU-hyR" eventType="touchUpInside" id="yn5-G8-hAm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -71,6 +82,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="bestScoreLabel" destination="6aM-vv-idz" id="Bmi-Yx-Bbr"/>
+                        <outlet property="btnPause" destination="qg6-su-Hwr" id="mJT-ya-t1V"/>
                         <outlet property="currentScore" destination="C0C-Tl-1an" id="lTl-MB-3p0"/>
                         <outlet property="gameOverView" destination="jUQ-xo-pvv" id="jmT-KA-abV"/>
                         <outlet property="gameView" destination="WSs-2w-tla" id="C3e-Dj-fKd"/>

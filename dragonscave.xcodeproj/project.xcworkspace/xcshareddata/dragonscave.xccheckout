@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CDD290D5-BAF3-4715-8C42-097C8E527016</string>
+	<key>IDESourceControlProjectName</key>
+	<string>dragonscave</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>37B229FB-3EEA-4892-8363-0D30F8964155</key>
+		<string>https://github.com/lfrcardozo/dragonscave.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>dragonscave.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>37B229FB-3EEA-4892-8363-0D30F8964155</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lfrcardozo/dragonscave.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>37B229FB-3EEA-4892-8363-0D30F8964155</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>37B229FB-3EEA-4892-8363-0D30F8964155</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dragonscave</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -18,6 +18,9 @@
 @property (weak,nonatomic) IBOutlet UIImageView * medalImageView;
 @property (weak,nonatomic) IBOutlet UILabel * currentScore;
 @property (weak,nonatomic) IBOutlet UILabel * bestScoreLabel;
+@property (weak, nonatomic) IBOutlet UIButton *btnPause;
+
+//@property (nonatomic)BOOL  isPaused;
 
 @end
 
@@ -69,6 +72,8 @@
         [flash removeFromSuperview];
         
     }];
+    [_btnPause setHidden:NO];
+    
 }
 
 - (void)eventPlay
@@ -128,6 +133,21 @@
     [animation setToValue:[NSValue valueWithCGPoint:
                            CGPointMake([self.view  center].x + 4.0f, [self.view  center].y)]];
     [[self.view layer] addAnimation:animation forKey:@"position"];
+}
+
+- (IBAction)toqueParaPausar:(id)sender {
+    
+//        _isPaused=YES;
+        [self->scene.view setPaused:YES];
+  //      [_btnPause setHidden:YES];
+  
+        [_btnPause setTitle:@"PAUSE" forState:UIControlStateNormal];
+
+//    else if (_isPaused==YES){
+//        _isPaused=NO;
+//        [self->scene.view setPaused:NO];
+//        [self shakeFrame];
+//    }
 }
 
 @end
