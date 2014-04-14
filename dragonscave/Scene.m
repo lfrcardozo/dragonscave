@@ -21,11 +21,18 @@
 #define OBSTACLE_MIN_HEIGHT 50 //60
 #define OBSTACLE_INTERVAL_SPACE 130
 
+@interface Scene()
+@property (strong,nonatomic) SKAction * flapMonster;
+@property (strong,nonatomic) SKAction * flapMonsterForever;
+@end;
+
 @implementation Scene{
     SKScrollingNode * floor;
     SKScrollingNode * back;
     SKLabelNode * scoreLabel;
     DragonNode * dragon;
+    
+   
     
     int nbObstacles;
     NSMutableArray * topPipes;
@@ -236,7 +243,7 @@ static bool wasted = NO;
     }
 }
 
-- (void)addMonster {
+/*- (void)addMonster {
     // Create sprite
     SKSpriteNode * monster = [SKSpriteNode spriteNodeWithImageNamed:@"medal_gold"];
     
@@ -268,43 +275,68 @@ static bool wasted = NO;
     SKAction * actionMoveDone = [SKAction removeFromParent];
     [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
     
-}
+}*/
 
-/*
+
  - (void)addMonster {
- // Create sprite
- SKSpriteNode * monster = [SKSpriteNode spriteNodeWithImageNamed:@"medal_gold"];
+  // TODO : use texture atlas
+     SKTexture* batTexture1 = [SKTexture textureWithImageNamed:@"bat1"];
+     batTexture1.filteringMode = SKTextureFilteringNearest;
+     SKTexture* batTexture2 = [SKTexture textureWithImageNamed:@"bat2"];
+     batTexture2.filteringMode = SKTextureFilteringNearest;
+     SKTexture* batTexture3 = [SKTexture textureWithImageNamed:@"bat3"];
+     batTexture3.filteringMode = SKTextureFilteringNearest;
+     SKTexture* batTexture4 = [SKTexture textureWithImageNamed:@"bat4"];
+     batTexture4.filteringMode = SKTextureFilteringNearest;
+     
+     // Create sprite
+     SKSpriteNode * monster = [SKSpriteNode spriteNodeWithTexture:batTexture1];
+
+     
+     
+      // Determine where to spawn the monster along the Y axis
+     int minY = monster.size.height / 2;
+     int maxY = self.frame.size.height - monster.size.height / 2;
+     int rangeY = maxY - minY;
+     int actualY = (arc4random() % rangeY) + minY;
  
- // Determine where to spawn the monster along the Y axis
- int minY = monster.size.height / 2;
- int maxY = self.frame.size.height - monster.size.height / 2;
- int rangeY = maxY - minY;
- int actualY = (arc4random() % rangeY) + minY;
+     
+     // Create the monster slightly off-screen along the right edge,
+     // and along a random position along the Y axis as calculated above
+     monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
+     [self addChild:monster];
+     
+     monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)];
+   // monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
+    // monster.physicsBody = monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];//[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0-monster.size.width/2,0-monster.size.height/2, monster.size.width ,monster.size.height)];//[SKPhysicsBody bodyWithRectangleOfSize:monster.size];// // funcionando//
+     //monster.physicsBody.dynamic = YES; // 2
+     monster.physicsBody.categoryBitMask = monsterCategory; // 3
+     monster.physicsBody.contactTestBitMask = projectileCategory | dragonBitMask; // 4
+     monster.physicsBody.collisionBitMask = projectileCategory | dragonBitMask; // 5
  
- // Create the monster slightly off-screen along the right edge,
- // and along a random position along the Y axis as calculated above
- monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
- monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)]; // funcionando[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];//
- monster.physicsBody.dynamic = YES; // 2
- monster.physicsBody.categoryBitMask = monsterCategory; // 3
- monster.physicsBody.contactTestBitMask = projectileCategory; // 4
- monster.physicsBody.collisionBitMask = 0; // 5
+     
+     
+         
+     self.flapMonster = [SKAction animateWithTextures:@[batTexture1, batTexture2,batTexture3,batTexture2] timePerFrame:0.2];
+     self.flapMonsterForever = [SKAction repeatActionForever:self.flapMonster];
+     
+     [monster setTexture:batTexture1];
+     [monster runAction:self.flapMonsterForever withKey:@"flapMonsterForever"];
+
  
- [self addChild:monster];
+     // Determine speed of the monster
+     int minDuration = 2.0;
+     int maxDuration = 6.0;//4.0;
+     int rangeDuration = maxDuration - minDuration;
+     int actualDuration = (arc4random() % rangeDuration) + minDuration;
  
- // Determine speed of the monster
- int minDuration = 2.0;
- int maxDuration = 4.0;
- int rangeDuration = maxDuration - minDuration;
- int actualDuration = (arc4random() % rangeDuration) + minDuration;
- 
- // Create the actions
- SKAction * actionMove = [SKAction moveTo:CGPointMake(-monster.size.width/2, actualY) duration:actualDuration];
- SKAction * actionMoveDone = [SKAction removeFromParent];
- [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
+     // Create the actions
+     SKAction * actionMove = [SKAction moveTo:CGPointMake(-monster.size.width/2, actualY) duration:actualDuration];
+     SKAction * actionMoveDone = [SKAction removeFromParent];
+     [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
  
  }
- */
+ 
 
 - (void)updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast {
     if(!dragon.physicsBody) {
@@ -316,6 +348,77 @@ static bool wasted = NO;
         self.lastSpawnTimeInterval = 0;
         [self addMonster];
     }
+}
+
+
+//ATIRAR FOGO
+static inline CGPoint rwAdd(CGPoint a, CGPoint b) {
+    return CGPointMake(a.x + b.x, a.y + b.y);
+}
+
+static inline CGPoint rwSub(CGPoint a, CGPoint b) {
+    return CGPointMake(a.x - b.x, a.y - b.y);
+}
+
+static inline CGPoint rwMult(CGPoint a, float b) {
+    return CGPointMake(a.x * b, a.y * b);
+}
+
+static inline float rwLength(CGPoint a) {
+    return sqrtf(a.x * a.x + a.y * a.y);
+}
+
+// Makes a vector have a length of 1
+static inline CGPoint rwNormalize(CGPoint a) {
+    float length = rwLength(a);
+    return CGPointMake(a.x / length, a.y / length);
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    // 1 - Choose one of the touches to work with
+    UITouch * touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+   
+    // 2 - Set up initial location of projectile
+    SKSpriteNode * projectile = [SKSpriteNode spriteNodeWithImageNamed:@"fogo2"];
+    
+    projectile.position = CGPointMake((dragon.position.x + (dragon.frame.size.width/2) - 5), (dragon.position.y - 10));//CGPointMake((dragon.position.x + 20), (dragon.position.y - 5));//dragon.position + (dragon.size.width);
+    
+    
+    // 3- Determine offset of location to projectile
+    CGPoint offset = rwSub(location, projectile.position);
+    
+    // 4 - Bail out if you are shooting down or backwards
+    if (offset.x <= 0) return;
+    
+    // 5 - OK to add now - we've double checked position
+    [self addChild:projectile];
+    // 6 - Get the direction of where to shoot
+    CGPoint direction = rwNormalize(offset);
+    
+    // 7 - Make it shoot far enough to be guaranteed off screen
+    CGPoint shootAmount = rwMult(direction, 1000);
+    
+    // 8 - Add the shoot amount to the current position
+    CGPoint realDest = rwAdd(shootAmount, projectile.position);
+    projectile.zPosition = dragon.zPosition;
+
+    
+    projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
+    projectile.physicsBody.dynamic = YES;
+    projectile.physicsBody.categoryBitMask = projectileCategory;
+    projectile.physicsBody.contactTestBitMask = monsterCategory;
+    projectile.physicsBody.collisionBitMask = monsterCategory;
+    projectile.physicsBody.usesPreciseCollisionDetection = YES;
+    
+        
+    // 9 - Create the actions
+    float velocity = 480.0/3.0;
+    float realMoveDuration = self.size.width / velocity;
+    SKAction * actionMove = [SKAction moveTo:realDest duration:realMoveDuration];
+    SKAction * actionMoveDone = [SKAction removeFromParent];
+    [projectile runAction:[SKAction sequence:@[actionMove,actionMoveDone]]];
+    
 }
 
 #pragma mark - Physic
@@ -333,10 +436,6 @@ static bool wasted = NO;
     }
     
     // 2
-    if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
-        (secondBody.categoryBitMask & monsterCategory) != 0) {
-        [self projectile:(SKSpriteNode *) firstBody.node didCollideWithMonster:(SKSpriteNode *) secondBody.node];
-    }
     
     //3
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
@@ -366,71 +465,11 @@ static bool wasted = NO;
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
-}
+    if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
+        (secondBody.categoryBitMask & monsterCategory) != 0) {
+        [self projectile:(SKSpriteNode *) firstBody.node didCollideWithMonster:(SKSpriteNode *) secondBody.node];
+    }
 
-//ATIRAR FOGO
-static inline CGPoint rwAdd(CGPoint a, CGPoint b) {
-    return CGPointMake(a.x + b.x, a.y + b.y);
-}
-
-static inline CGPoint rwSub(CGPoint a, CGPoint b) {
-    return CGPointMake(a.x - b.x, a.y - b.y);
-}
-
-static inline CGPoint rwMult(CGPoint a, float b) {
-    return CGPointMake(a.x * b, a.y * b);
-}
-
-static inline float rwLength(CGPoint a) {
-    return sqrtf(a.x * a.x + a.y * a.y);
-}
-
-// Makes a vector have a length of 1
-static inline CGPoint rwNormalize(CGPoint a) {
-    float length = rwLength(a);
-    return CGPointMake(a.x / length, a.y / length);
-}
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    // 1 - Choose one of the touches to work with
-    UITouch * touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    
-    // 2 - Set up initial location of projectile
-    SKSpriteNode * projectile = [SKSpriteNode spriteNodeWithImageNamed:@"fogo2"];
-    projectile.position = CGPointMake((dragon.position.x + 20), (dragon.position.y - 5));//dragon.position + (dragon.size.width);
-    projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];
-    projectile.physicsBody.dynamic = YES;
-    projectile.physicsBody.categoryBitMask = projectileCategory;
-    projectile.physicsBody.contactTestBitMask = monsterCategory;
-    projectile.physicsBody.collisionBitMask = 0;
-    projectile.physicsBody.usesPreciseCollisionDetection = YES;
-    
-    // 3- Determine offset of location to projectile
-    CGPoint offset = rwSub(location, projectile.position);
-    
-    // 4 - Bail out if you are shooting down or backwards
-    if (offset.x <= 0) return;
-    
-    // 5 - OK to add now - we've double checked position
-    [self addChild:projectile];
-    
-    // 6 - Get the direction of where to shoot
-    CGPoint direction = rwNormalize(offset);
-    
-    // 7 - Make it shoot far enough to be guaranteed off screen
-    CGPoint shootAmount = rwMult(direction, 1000);
-    
-    // 8 - Add the shoot amount to the current position
-    CGPoint realDest = rwAdd(shootAmount, projectile.position);
-    
-    // 9 - Create the actions
-    float velocity = 480.0/3.0;
-    float realMoveDuration = self.size.width / velocity;
-    SKAction * actionMove = [SKAction moveTo:realDest duration:realMoveDuration];
-    SKAction * actionMoveDone = [SKAction removeFromParent];
-    [projectile runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
-    
 }
 
 - (void)projectile:(SKSpriteNode *)projectile didCollideWithMonster:(SKSpriteNode *)monster {
