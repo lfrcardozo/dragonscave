@@ -10,6 +10,7 @@
 #import "Scene.h"
 #import "Score.h"
 
+
 @interface ViewController ()
 @property (weak,nonatomic) IBOutlet SKView * gameView;
 @property (weak,nonatomic) IBOutlet UIView * getReadyView;
@@ -148,6 +149,14 @@
 //        [self->scene.view setPaused:NO];
 //        [self shakeFrame];
 //    }
+    
+    NSString *string = @"Hello, World!";
+    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:string];
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
+    
+    AVSpeechSynthesizer *speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
+    [speechSynthesizer speakUtterance:utterance];
+    
 }
 
 @end

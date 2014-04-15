@@ -101,7 +101,7 @@ static bool wasted = NO;
     [floor setName:@"floor"];
     [floor setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:floor.frame]];
     floor.physicsBody.categoryBitMask = floorBitMask;
-    floor.physicsBody.contactTestBitMask = dragonBitMask;
+    floor.physicsBody.contactTestBitMask = dragonBitMask |projectileCategory;
     [self addChild:floor];
 }
 
@@ -313,9 +313,10 @@ static bool wasted = NO;
      // and along a random position along the Y axis as calculated above
      monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
      [self addChild:monster];
-     
-     monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)];
-   // monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
+//     
+//     monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)];
+monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-monster.size.width/2,-monster.size.height/2, monster.size.width ,monster.size.height)];
+//    monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
     // monster.physicsBody = monster.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, monster.size.width ,monster.size.height)];//[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0-monster.size.width/2,0-monster.size.height/2, monster.size.width ,monster.size.height)];//[SKPhysicsBody bodyWithRectangleOfSize:monster.size];// // funcionando//
      //monster.physicsBody.dynamic = YES; // 2
      monster.physicsBody.categoryBitMask = monsterCategory; // 3
@@ -415,7 +416,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.categoryBitMask = projectileCategory;
-    projectile.physicsBody.contactTestBitMask = monsterCategory;
+    projectile.physicsBody.contactTestBitMask = monsterCategory |floorBitMask ;
     projectile.physicsBody.collisionBitMask = monsterCategory;
     projectile.physicsBody.usesPreciseCollisionDetection = YES;
     
@@ -443,7 +444,10 @@ static inline CGPoint rwNormalize(CGPoint a) {
         secondBody = contact.bodyA;
     }
     
-    // 2
+    NSLog(contact.bodyA.node.name);
+    
+    NSLog(contact.bodyB.node.name);
+    
     
     //3
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
