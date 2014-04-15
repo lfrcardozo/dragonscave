@@ -86,6 +86,7 @@
 
 - (void)eventWasted
 {
+    
     flash = [[UIView alloc] initWithFrame:self.view.frame];
     flash.backgroundColor = [UIColor whiteColor];
     flash.alpha = 0;
