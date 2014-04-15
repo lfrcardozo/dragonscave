@@ -38,7 +38,7 @@
     
     
 	// Configure the view.
-    self.gameView.showsPhysics = YES;
+    //self.gameView.showsPhysics = YES;
     //self.gameView.showsFPS = YES;
     //self.gameView.showsNodeCount = YES;
     

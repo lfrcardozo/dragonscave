@@ -87,8 +87,8 @@ static bool wasted = NO;
     self.score = 0;
     scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Bold"];
     scoreLabel.text = @"0";
-    scoreLabel.fontSize = 150; //500;
-    scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 100);
+    scoreLabel.fontSize = 80; //500;
+    scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 150);
     scoreLabel.alpha = 0.2;
     [self addChild:scoreLabel];
 }
@@ -244,8 +244,8 @@ static bool wasted = NO;
             self.score +=1;
             scoreLabel.text = [NSString stringWithFormat:@"%lu",(long)self.score];
             if(self.score>=10) {
-                scoreLabel.fontSize = 340;
-                scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);
+                scoreLabel.fontSize = 80;
+                scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 150);
             }
         }
     }
@@ -410,10 +410,9 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     // 8 - Add the shoot amount to the current position
     CGPoint realDest = rwAdd(shootAmount, projectile.position);
-    projectile.zPosition = dragon.zPosition;
 
-    
-    projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
+    projectile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:projectile.size];
+    //projectile.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-projectile.size.width/2,-projectile.size.height/2, projectile.size.width ,projectile.size.height)]; //[SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, projectile.size.width ,projectile.size.height)];//
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.categoryBitMask = projectileCategory;
     projectile.physicsBody.contactTestBitMask = monsterCategory |floorBitMask ;
