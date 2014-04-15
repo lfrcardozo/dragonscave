@@ -418,7 +418,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     projectile.physicsBody.collisionBitMask = monsterCategory;
     projectile.physicsBody.usesPreciseCollisionDetection = YES;
     
-        
+
     // 9 - Create the actions
     float velocity = 480.0/3.0;
     float realMoveDuration = self.size.width / velocity;
@@ -448,6 +448,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
         (secondBody.categoryBitMask & blockBitMask) !=0) {
         wasted = true;
+       
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
@@ -484,5 +485,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     [projectile removeFromParent];
     [monster removeFromParent];
 }
+
+
 
 @end

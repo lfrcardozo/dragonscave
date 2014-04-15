@@ -11,6 +11,9 @@
 		A47A873D18F8693000AA2467 /* bat3.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873918F8693000AA2467 /* bat3.png */; };
 		A47A873E18F8693000AA2467 /* bat2.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873A18F8693000AA2467 /* bat2.png */; };
 		A47A873F18F8693000AA2467 /* bat1.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873B18F8693000AA2467 /* bat1.png */; };
+		A49D0FC918FDB8AA003DC352 /* dragao_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A49D0FC618FDB8AA003DC352 /* dragao_3.png */; };
+		A49D0FCA18FDB8AA003DC352 /* dragao_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A49D0FC718FDB8AA003DC352 /* dragao_1.png */; };
+		A49D0FCB18FDB8AA003DC352 /* dragao_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A49D0FC818FDB8AA003DC352 /* dragao_2.png */; };
 		A4E40EFE18F5B94A002E63E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFD18F5B94A002E63E9 /* Foundation.framework */; };
 		A4E40F0018F5B94A002E63E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */; };
 		A4E40F0218F5B94A002E63E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E40F0118F5B94A002E63E9 /* UIKit.framework */; };
@@ -77,6 +80,9 @@
 		A47A873918F8693000AA2467 /* bat3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat3.png; sourceTree = "<group>"; };
 		A47A873A18F8693000AA2467 /* bat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat2.png; sourceTree = "<group>"; };
 		A47A873B18F8693000AA2467 /* bat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat1.png; sourceTree = "<group>"; };
+		A49D0FC618FDB8AA003DC352 /* dragao_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao_3.png; sourceTree = "<group>"; };
+		A49D0FC718FDB8AA003DC352 /* dragao_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao_1.png; sourceTree = "<group>"; };
+		A49D0FC818FDB8AA003DC352 /* dragao_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragao_2.png; sourceTree = "<group>"; };
 		A4E40EFA18F5B94A002E63E9 /* dragonscave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dragonscave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E40EFD18F5B94A002E63E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -330,6 +336,9 @@
 				A47A873918F8693000AA2467 /* bat3.png */,
 				A47A873A18F8693000AA2467 /* bat2.png */,
 				A47A873B18F8693000AA2467 /* bat1.png */,
+				A49D0FC718FDB8AA003DC352 /* dragao_1.png */,
+				A49D0FC818FDB8AA003DC352 /* dragao_2.png */,
+				A49D0FC618FDB8AA003DC352 /* dragao_3.png */,
 				A4E40F5818F5BD8F002E63E9 /* dragon_1.png */,
 				A4E40F5918F5BD8F002E63E9 /* dragon_2.png */,
 				A4E40F5A18F5BD8F002E63E9 /* dragon_3.png */,
@@ -432,6 +441,7 @@
 				A4E40F8018F5BD8F002E63E9 /* dragon.png in Resources */,
 				A4E40F6C18F5BD8F002E63E9 /* back@2x.png in Resources */,
 				A4E40F6F18F5BD8F002E63E9 /* game_over@2x.png in Resources */,
+				A49D0FC918FDB8AA003DC352 /* dragao_3.png in Resources */,
 				A4E40F7A18F5BD8F002E63E9 /* dragao2.png in Resources */,
 				A4E40F6518F5BD8F002E63E9 /* medal_silver@2x.png in Resources */,
 				A4E40F7518F5BD8F002E63E9 /* floor2.png in Resources */,
@@ -441,6 +451,7 @@
 				A47A873C18F8693000AA2467 /* bat4.png in Resources */,
 				A4E40F7618F5BD8F002E63E9 /* dragon_1.png in Resources */,
 				A4E40F6E18F5BD8F002E63E9 /* medal_plate@2x.png in Resources */,
+				A49D0FCA18FDB8AA003DC352 /* dragao_1.png in Resources */,
 				A4E40F7D18F5BD8F002E63E9 /* floor@2x.png in Resources */,
 				A4E40F9118F5C224002E63E9 /* back1@2x.png in Resources */,
 				A47A873E18F8693000AA2467 /* bat2.png in Resources */,
@@ -458,6 +469,7 @@
 				A4E40F7C18F5BD8F002E63E9 /* dragao_icon.png in Resources */,
 				A4E40F7F18F5BD8F002E63E9 /* dragon2.png in Resources */,
 				A4E40F0A18F5B94A002E63E9 /* InfoPlist.strings in Resources */,
+				A49D0FCB18FDB8AA003DC352 /* dragao_2.png in Resources */,
 				A47A873F18F8693000AA2467 /* bat1.png in Resources */,
 				A4E40F6718F5BD8F002E63E9 /* medal_bronze@2x.png in Resources */,
 			);

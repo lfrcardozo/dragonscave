@@ -26,13 +26,13 @@ static bool goingUp = false;
     if(self = [super init]){
         
         // TODO : use texture atlas
-        SKTexture* dragonTexture1 = [SKTexture textureWithImageNamed:@"dragon_1"];
+        SKTexture* dragonTexture1 = [SKTexture textureWithImageNamed:@"dragao_1"];
         dragonTexture1.filteringMode = SKTextureFilteringNearest;
-        SKTexture* dragonTexture2 = [SKTexture textureWithImageNamed:@"dragon_2"];
+        SKTexture* dragonTexture2 = [SKTexture textureWithImageNamed:@"dragao_2"];
         dragonTexture2.filteringMode = SKTextureFilteringNearest;
-        SKTexture* dragonTexture3 = [SKTexture textureWithImageNamed:@"dragon_3"];
+        SKTexture* dragonTexture3 = [SKTexture textureWithImageNamed:@"dragao_3"];
         dragonTexture3.filteringMode = SKTextureFilteringNearest;
-        SKTexture* dragonTexture4 = [SKTexture textureWithImageNamed:@"dragon_2"];
+        SKTexture* dragonTexture4 = [SKTexture textureWithImageNamed:@"dragao_2"];
         dragonTexture4.filteringMode = SKTextureFilteringNearest;
 
         self = [DragonNode spriteNodeWithTexture:dragonTexture1];
