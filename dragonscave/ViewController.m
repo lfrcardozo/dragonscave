@@ -150,14 +150,10 @@
 //        [self shakeFrame];
 //    }
     
-    NSString *string = @"Hello, World!";
-    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:string];
-    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
-    
-    AVSpeechSynthesizer *speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
-    [speechSynthesizer speakUtterance:utterance];
     
 }
+
+
 
 @end
 

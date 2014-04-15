@@ -12,6 +12,7 @@
 #import "DragonNode.h"
 #import "Score.h"
 
+
 #define BACK_SCROLLING_SPEED .5
 #define FLOOR_SCROLLING_SPEED 3
 
@@ -24,6 +25,9 @@
 @interface Scene()
 @property (strong,nonatomic) SKAction * flapMonster;
 @property (strong,nonatomic) SKAction * flapMonsterForever;
+
+@property (strong, nonatomic) AVAudioPlayer * musicPlayer;
+
 @end;
 
 @implementation Scene{
@@ -443,22 +447,29 @@ static inline CGPoint rwNormalize(CGPoint a) {
         secondBody = contact.bodyA;
     }
     
-    NSLog(contact.bodyA.node.name);
-    
-    NSLog(contact.bodyB.node.name);
-    
+
     
     //3
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
         (secondBody.categoryBitMask & blockBitMask) !=0) {
         wasted = true;
+     
+         [self musicDeath];
         [Score registerScore:self.score];
         [self.delegate eventWasted];
+
+        
+     
+        
     }
     
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
         (secondBody.categoryBitMask & floorBitMask) !=0) {
         wasted = true;
+        
+        
+        
+       [self musicDeath];
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
@@ -466,6 +477,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     if ((firstBody.categoryBitMask & backBitMask) != 0 &&
         (secondBody.categoryBitMask & dragonBitMask) !=0) {
         wasted = true;
+         [self musicDeath];
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
@@ -473,6 +485,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     if ((firstBody.categoryBitMask & dragonBitMask) != 0 &&
         (secondBody.categoryBitMask & monsterCategory) !=0) {
         wasted = true;
+         [self musicDeath];
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
@@ -489,4 +502,22 @@ static inline CGPoint rwNormalize(CGPoint a) {
     [monster removeFromParent];
 }
 
+- (void) setupMusic
+{
+    NSString *musicPath = [[NSBundle mainBundle]
+                           pathForResource:@"risada" ofType:@"m4a"];
+    self.musicPlayer = [[AVAudioPlayer alloc]
+                        initWithContentsOfURL:[NSURL fileURLWithPath:musicPath] error:NULL];
+    self.musicPlayer.numberOfLoops = -1;
+    self.musicPlayer.volume = 1.0;
+    [self.musicPlayer play];
+}
+
+-(void) musicDeath{
+
+    SKAction *soundAction = [SKAction playSoundFileNamed:@"risada.m4a"
+                                       waitForCompletion:NO];
+    [self runAction:soundAction];
+
+}
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1092F38A18FDBDBD0019DFC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */; };
+		1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1092F38D18FDC6C30019DFC2 /* risada.m4a */; };
 		A47A873C18F8693000AA2467 /* bat4.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873818F8693000AA2467 /* bat4.png */; };
 		A47A873D18F8693000AA2467 /* bat3.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873918F8693000AA2467 /* bat3.png */; };
 		A47A873E18F8693000AA2467 /* bat2.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873A18F8693000AA2467 /* bat2.png */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1092F38D18FDC6C30019DFC2 /* risada.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = risada.m4a; sourceTree = "<group>"; };
 		A47A873818F8693000AA2467 /* bat4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat4.png; sourceTree = "<group>"; };
 		A47A873918F8693000AA2467 /* bat3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat3.png; sourceTree = "<group>"; };
 		A47A873A18F8693000AA2467 /* bat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat2.png; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1092F38A18FDBDBD0019DFC2 /* AVFoundation.framework in Frameworks */,
 				A4E40F0018F5B94A002E63E9 /* CoreGraphics.framework in Frameworks */,
 				A4E40F0218F5B94A002E63E9 /* UIKit.framework in Frameworks */,
 				A4E40F0418F5B94A002E63E9 /* SpriteKit.framework in Frameworks */,
@@ -188,6 +193,7 @@
 		A4E40EFC18F5B94A002E63E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */,
 				A4E40EFD18F5B94A002E63E9 /* Foundation.framework */,
 				A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */,
 				A4E40F0118F5B94A002E63E9 /* UIKit.framework */,
@@ -302,6 +308,7 @@
 		A4E40F8E18F5BF19002E63E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1092F38D18FDC6C30019DFC2 /* risada.m4a */,
 				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
 				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
 				A4E40F8F18F5BF46002E63E9 /* Images */,
@@ -454,6 +461,7 @@
 				A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */,
 				A4E40F7818F5BD8F002E63E9 /* dragon_3.png in Resources */,
 				A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */,
+				1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */,
 				A4E40F6618F5BD8F002E63E9 /* medal_gold@2x.png in Resources */,
 				A4E40F7C18F5BD8F002E63E9 /* dragao_icon.png in Resources */,
 				A4E40F7F18F5BD8F002E63E9 /* dragon2.png in Resources */,
@@ -619,11 +627,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -632,11 +645,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
