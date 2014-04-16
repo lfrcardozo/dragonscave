@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1092F38A18FDBDBD0019DFC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */; };
 		1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1092F38D18FDC6C30019DFC2 /* risada.m4a */; };
+		1092F39218FEF6F50019DFC2 /* fireball_burst.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1092F39118FEF6F50019DFC2 /* fireball_burst.mp3 */; };
+		1092F39418FEF7E80019DFC2 /* rat_die.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1092F39318FEF7E80019DFC2 /* rat_die.mp3 */; };
 		A47A873C18F8693000AA2467 /* bat4.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873818F8693000AA2467 /* bat4.png */; };
 		A47A873D18F8693000AA2467 /* bat3.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873918F8693000AA2467 /* bat3.png */; };
 		A47A873E18F8693000AA2467 /* bat2.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873A18F8693000AA2467 /* bat2.png */; };
@@ -84,6 +86,8 @@
 /* Begin PBXFileReference section */
 		1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1092F38D18FDC6C30019DFC2 /* risada.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = risada.m4a; sourceTree = "<group>"; };
+		1092F39118FEF6F50019DFC2 /* fireball_burst.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fireball_burst.mp3; sourceTree = "<group>"; };
+		1092F39318FEF7E80019DFC2 /* rat_die.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rat_die.mp3; sourceTree = "<group>"; };
 		A47A873818F8693000AA2467 /* bat4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat4.png; sourceTree = "<group>"; };
 		A47A873918F8693000AA2467 /* bat3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat3.png; sourceTree = "<group>"; };
 		A47A873A18F8693000AA2467 /* bat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat2.png; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 		A4E40F8E18F5BF19002E63E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1092F39318FEF7E80019DFC2 /* rat_die.mp3 */,
+				1092F39118FEF6F50019DFC2 /* fireball_burst.mp3 */,
 				1092F38D18FDC6C30019DFC2 /* risada.m4a */,
 				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
 				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
@@ -486,6 +492,7 @@
 				A4E40F7418F5BD8F002E63E9 /* floor4@2x.png in Resources */,
 				A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */,
 				A4E40F7818F5BD8F002E63E9 /* dragon_3.png in Resources */,
+				1092F39218FEF6F50019DFC2 /* fireball_burst.mp3 in Resources */,
 				A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */,
 				1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */,
 				A4E40F6618F5BD8F002E63E9 /* medal_gold@2x.png in Resources */,
@@ -496,6 +503,7 @@
 				A49D0FCB18FDB8AA003DC352 /* dragao_2.png in Resources */,
 				A47A873F18F8693000AA2467 /* bat1.png in Resources */,
 				A4E40F6718F5BD8F002E63E9 /* medal_bronze@2x.png in Resources */,
+				1092F39418FEF7E80019DFC2 /* rat_die.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

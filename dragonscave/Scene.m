@@ -406,6 +406,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     // 5 - OK to add now - we've double checked position
     [self addChild:projectile];
+    [self musicFireBall];
     // 6 - Get the direction of where to shoot
     CGPoint direction = rwNormalize(offset);
     
@@ -470,6 +471,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
         
         
        [self musicDeath];
+        
         [Score registerScore:self.score];
         [self.delegate eventWasted];
     }
@@ -500,6 +502,7 @@ static inline CGPoint rwNormalize(CGPoint a) {
     NSLog(@"Hit");
     [projectile removeFromParent];
     [monster removeFromParent];
+    [self musicDeathmonster];
 }
 
 - (void) setupMusic
@@ -520,4 +523,20 @@ static inline CGPoint rwNormalize(CGPoint a) {
     [self runAction:soundAction];
 
 }
+-(void) musicFireBall{
+    
+    SKAction *soundAction = [SKAction playSoundFileNamed:@"fireball_burst.mp3"
+                                       waitForCompletion:NO];
+    [self runAction:soundAction];
+    
+}
+
+-(void) musicDeathmonster{
+    
+    SKAction *soundAction = [SKAction playSoundFileNamed:@"rat_die.mp3"
+                                       waitForCompletion:NO];
+    [self runAction:soundAction];
+    
+}
+
 @end
