@@ -10,6 +10,7 @@
 #import "Scene.h"
 #import "Score.h"
 
+
 @interface ViewController ()
 @property (weak,nonatomic) IBOutlet SKView * gameView;
 @property (weak,nonatomic) IBOutlet UIView * getReadyView;
@@ -149,7 +150,11 @@
 //        [self->scene.view setPaused:NO];
 //        [self shakeFrame];
 //    }
+    
+    
 }
+
+
 
 @end
 

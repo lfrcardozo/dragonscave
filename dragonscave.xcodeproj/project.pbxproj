@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1092F38A18FDBDBD0019DFC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */; };
+		1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1092F38D18FDC6C30019DFC2 /* risada.m4a */; };
 		A47A873C18F8693000AA2467 /* bat4.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873818F8693000AA2467 /* bat4.png */; };
 		A47A873D18F8693000AA2467 /* bat3.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873918F8693000AA2467 /* bat3.png */; };
 		A47A873E18F8693000AA2467 /* bat2.png in Resources */ = {isa = PBXBuildFile; fileRef = A47A873A18F8693000AA2467 /* bat2.png */; };
@@ -63,6 +65,10 @@
 		A4E40F8918F5BE7A002E63E9 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E40F8818F5BE7A002E63E9 /* Score.m */; };
 		A4E40F9118F5C224002E63E9 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E40F9018F5C224002E63E9 /* back1@2x.png */; };
 		E653BA7D18F865C500BDCE89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E653BA7C18F865C500BDCE89 /* Default-568h@2x.png */; };
+		E6D1ABE318FDC756003E6799 /* 76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D1ABDF18FDC756003E6799 /* 76x76.png */; };
+		E6D1ABE418FDC756003E6799 /* 60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D1ABE018FDC756003E6799 /* 60x60.png */; };
+		E6D1ABE518FDC756003E6799 /* 29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D1ABE118FDC756003E6799 /* 29x29.png */; };
+		E6D1ABE618FDC756003E6799 /* 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D1ABE218FDC756003E6799 /* 40x40.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1092F38D18FDC6C30019DFC2 /* risada.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = risada.m4a; sourceTree = "<group>"; };
 		A47A873818F8693000AA2467 /* bat4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat4.png; sourceTree = "<group>"; };
 		A47A873918F8693000AA2467 /* bat3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat3.png; sourceTree = "<group>"; };
 		A47A873A18F8693000AA2467 /* bat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bat2.png; sourceTree = "<group>"; };
@@ -144,6 +152,10 @@
 		A4E40F8818F5BE7A002E63E9 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		A4E40F9018F5C224002E63E9 /* back1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back1@2x.png"; sourceTree = "<group>"; };
 		E653BA7C18F865C500BDCE89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E6D1ABDF18FDC756003E6799 /* 76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76x76.png; sourceTree = "<group>"; };
+		E6D1ABE018FDC756003E6799 /* 60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 60x60.png; sourceTree = "<group>"; };
+		E6D1ABE118FDC756003E6799 /* 29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x29.png; sourceTree = "<group>"; };
+		E6D1ABE218FDC756003E6799 /* 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40x40.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1092F38A18FDBDBD0019DFC2 /* AVFoundation.framework in Frameworks */,
 				A4E40F0018F5B94A002E63E9 /* CoreGraphics.framework in Frameworks */,
 				A4E40F0218F5B94A002E63E9 /* UIKit.framework in Frameworks */,
 				A4E40F0418F5B94A002E63E9 /* SpriteKit.framework in Frameworks */,
@@ -194,6 +207,7 @@
 		A4E40EFC18F5B94A002E63E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1092F38918FDBDBD0019DFC2 /* AVFoundation.framework */,
 				A4E40EFD18F5B94A002E63E9 /* Foundation.framework */,
 				A4E40EFF18F5B94A002E63E9 /* CoreGraphics.framework */,
 				A4E40F0118F5B94A002E63E9 /* UIKit.framework */,
@@ -308,6 +322,7 @@
 		A4E40F8E18F5BF19002E63E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1092F38D18FDC6C30019DFC2 /* risada.m4a */,
 				A4E40F1118F5B94A002E63E9 /* Main_iPhone.storyboard */,
 				A4E40F1418F5B94A002E63E9 /* Main_iPad.storyboard */,
 				A4E40F8F18F5BF46002E63E9 /* Images */,
@@ -341,6 +356,10 @@
 				A49D0FC618FDB8AA003DC352 /* dragao_3.png */,
 				A4E40F5818F5BD8F002E63E9 /* dragon_1.png */,
 				A4E40F5918F5BD8F002E63E9 /* dragon_2.png */,
+				E6D1ABDF18FDC756003E6799 /* 76x76.png */,
+				E6D1ABE018FDC756003E6799 /* 60x60.png */,
+				E6D1ABE118FDC756003E6799 /* 29x29.png */,
+				E6D1ABE218FDC756003E6799 /* 40x40.png */,
 				A4E40F5A18F5BD8F002E63E9 /* dragon_3.png */,
 				A4E40F5B18F5BD8F002E63E9 /* dragao1.png */,
 				A4E40F5C18F5BD8F002E63E9 /* dragao2.png */,
@@ -437,6 +456,7 @@
 				A4E40F7118F5BD8F002E63E9 /* medal_platinum@2x.png in Resources */,
 				A4E40F8118F5BD8F002E63E9 /* pipe_top@2x.png in Resources */,
 				A4E40F2018F5B94A002E63E9 /* Images.xcassets in Resources */,
+				E6D1ABE518FDC756003E6799 /* 29x29.png in Resources */,
 				A4E40F6818F5BD8F002E63E9 /* cave2@2x.png in Resources */,
 				A4E40F8018F5BD8F002E63E9 /* dragon.png in Resources */,
 				A4E40F6C18F5BD8F002E63E9 /* back@2x.png in Resources */,
@@ -447,8 +467,10 @@
 				A4E40F7518F5BD8F002E63E9 /* floor2.png in Resources */,
 				A4E40F7918F5BD8F002E63E9 /* dragao1.png in Resources */,
 				A47A873D18F8693000AA2467 /* bat3.png in Resources */,
+				E6D1ABE318FDC756003E6799 /* 76x76.png in Resources */,
 				A4E40F7E18F5BD8F002E63E9 /* dragon3.png in Resources */,
 				A47A873C18F8693000AA2467 /* bat4.png in Resources */,
+				E6D1ABE418FDC756003E6799 /* 60x60.png in Resources */,
 				A4E40F7618F5BD8F002E63E9 /* dragon_1.png in Resources */,
 				A4E40F6E18F5BD8F002E63E9 /* medal_plate@2x.png in Resources */,
 				A49D0FCA18FDB8AA003DC352 /* dragao_1.png in Resources */,
@@ -458,6 +480,7 @@
 				A4E40F7718F5BD8F002E63E9 /* dragon_2.png in Resources */,
 				A4E40F7018F5BD8F002E63E9 /* fogo2@2x.png in Resources */,
 				A4E40F8218F5BD8F002E63E9 /* pipe_bottom@2x.png in Resources */,
+				E6D1ABE618FDC756003E6799 /* 40x40.png in Resources */,
 				A4E40F7318F5BD8F002E63E9 /* get_ready@2x.png in Resources */,
 				A4E40F7218F5BD8F002E63E9 /* taptap@2x.png in Resources */,
 				A4E40F7B18F5BD8F002E63E9 /* dragao3.png in Resources */,
@@ -465,6 +488,7 @@
 				A4E40F1618F5B94A002E63E9 /* Main_iPad.storyboard in Resources */,
 				A4E40F7818F5BD8F002E63E9 /* dragon_3.png in Resources */,
 				A4E40F1318F5B94A002E63E9 /* Main_iPhone.storyboard in Resources */,
+				1092F38E18FDC6C30019DFC2 /* risada.m4a in Resources */,
 				A4E40F6618F5BD8F002E63E9 /* medal_gold@2x.png in Resources */,
 				A4E40F7C18F5BD8F002E63E9 /* dragao_icon.png in Resources */,
 				A4E40F7F18F5BD8F002E63E9 /* dragon2.png in Resources */,
@@ -631,11 +655,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -644,11 +673,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dragonscave/dragonscave-Prefix.pch";
 				INFOPLIST_FILE = "dragonscave/dragonscave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

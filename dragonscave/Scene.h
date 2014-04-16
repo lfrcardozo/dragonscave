@@ -7,6 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
+@import AVFoundation;
 
 @protocol SceneDelegate <NSObject>
 - (void) eventStart;
@@ -20,6 +22,7 @@
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
+@property (nonatomic)	AVAudioPlayer* audioPlayer;
 
 - (void) startGame;
 
