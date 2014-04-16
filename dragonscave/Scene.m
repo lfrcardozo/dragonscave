@@ -78,7 +78,7 @@ static bool wasted = NO;
 #pragma mark - Creations
 
 - (void) createBackground {
-    back = [SKScrollingNode scrollingNodeWithImageNamed:@"back1" inContainerWidth:WIDTH(self)];
+    back = [SKScrollingNode scrollingNodeWithImageNamed:@"cavern.jpg" inContainerWidth:WIDTH(self)];
     [back setScrollingSpeed:BACK_SCROLLING_SPEED];
     [back setAnchorPoint: CGPointZero];
     [back setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];
